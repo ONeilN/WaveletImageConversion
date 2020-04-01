@@ -5,7 +5,7 @@ import com.nugumanov.wavelettransform.transforms.Transform;
 
 public class WaveletFactory {
 
-    public Transform getTransform(Wavelets wavelet) {
+    public static Transform getTransform(Wavelets wavelet) {
         switch (wavelet) {
             case HAAR : return new HaarTransform();
             default : return null;

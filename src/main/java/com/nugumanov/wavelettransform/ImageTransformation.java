@@ -12,7 +12,7 @@ public class ImageTransformation implements WaveletTransformation {
     public BufferedImage forwardImage(BufferedImage bufferedImage, Wavelets type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
-        BufferedImage resultImage = null;
+        BufferedImage resultImage = bufferedImage;
 
         int width = bufferedImage.getWidth();    // Ширина изображения
         int height = bufferedImage.getHeight();  // Высота изображения
@@ -54,7 +54,7 @@ public class ImageTransformation implements WaveletTransformation {
 
     public BufferedImage reverseImage(BufferedImage bufferedImage, Wavelets type, int iterations) {
 
-        BufferedImage resultImage = null;
+        BufferedImage resultImage = bufferedImage;
 
         int width = bufferedImage.getWidth();    // Ширина изображения
         int height = bufferedImage.getHeight();  // Высота изображения

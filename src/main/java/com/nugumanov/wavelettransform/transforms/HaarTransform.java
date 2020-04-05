@@ -19,7 +19,6 @@ public class HaarTransform implements Transform {
         for (int i = 0; i < h; i++) {
 
             int k = (i << 1);
-            System.out.println("k" + i + ": " + k);
             temp[i] = data[k] * s0 + data[k + 1] * s1;
             temp[i + h] = data[k] * w0 + data[k + 1] * w1;
         }

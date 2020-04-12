@@ -9,7 +9,17 @@ public class ImageTransformation implements WaveletTransformation {
 
     private Transform waveletTransform = null;
 
-    public BufferedImage forwardImage(BufferedImage bufferedImage, Wavelets type, int iterations) {
+    public BufferedImage transform(BufferedImage bufferedImage, TransformType transformType, WaveletType waveletType, int iterations) {
+        switch (transformType) {
+            case FORWARD:
+                return forwardImage(bufferedImage, waveletType, iterations);
+            case REVERSE:
+                return reverseImage(bufferedImage, waveletType, iterations);
+            default: return null;
+        }
+    }
+
+    public BufferedImage forwardImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
@@ -48,12 +58,13 @@ public class ImageTransformation implements WaveletTransformation {
         return resultImage;
     }
 
-    public double[][] forwardArray(BufferedImage image, Wavelets type, int iterations) {
+    public double[][] forwardArray(BufferedImage image, WaveletType type, int iterations) {
         return new double[0][];
     }
 
-    public BufferedImage reverseImage(BufferedImage bufferedImage, Wavelets type, int iterations) {
+    public BufferedImage reverseImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
+        waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
 
         int width = bufferedImage.getWidth();    // Ширина изображения
@@ -88,7 +99,7 @@ public class ImageTransformation implements WaveletTransformation {
         return resultImage;
     }
 
-    public double[][] reverseArray(BufferedImage image, Wavelets type, int iterations) {
+    public double[][] reverseArray(BufferedImage image, WaveletType type, int iterations) {
         return new double[0][];
     }
 

@@ -1,5 +1,6 @@
 package com.nugumanov.wavelettransform;
 
-public enum Wavelets {
+public enum WaveletType {
     HAAR
 }
+

@@ -1,6 +1,8 @@
 package com.nugumanov.wavelettransform.test;
 
 import com.nugumanov.wavelettransform.*;
+import com.nugumanov.wavelettransform.enums.TransformType;
+import com.nugumanov.wavelettransform.enums.WaveletType;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

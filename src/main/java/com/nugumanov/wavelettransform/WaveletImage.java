@@ -1,5 +1,8 @@
 package com.nugumanov.wavelettransform;
 
+import com.nugumanov.wavelettransform.enums.TransformType;
+import com.nugumanov.wavelettransform.enums.WaveletType;
+
 import java.awt.image.BufferedImage;
 
 public interface WaveletImage {

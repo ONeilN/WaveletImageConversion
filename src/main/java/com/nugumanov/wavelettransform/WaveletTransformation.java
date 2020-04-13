@@ -1,8 +1,11 @@
 package com.nugumanov.wavelettransform;
 
+import com.nugumanov.wavelettransform.enums.TransformType;
+import com.nugumanov.wavelettransform.enums.WaveletType;
+
 import java.awt.image.BufferedImage;
 
-public interface WaveletTransformation {
+interface WaveletTransformation {
 
     BufferedImage transform(BufferedImage bufferedImage, TransformType transformType, WaveletType waveletType, int iterations);
 

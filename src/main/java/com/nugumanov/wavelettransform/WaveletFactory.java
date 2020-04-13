@@ -1,5 +1,6 @@
 package com.nugumanov.wavelettransform;
 
+import com.nugumanov.wavelettransform.enums.WaveletType;
 import com.nugumanov.wavelettransform.transforms.HaarTransform;
 import com.nugumanov.wavelettransform.transforms.Transform;
 

@@ -1,5 +1,7 @@
 package com.nugumanov.wavelettransform;
 
+import com.nugumanov.wavelettransform.enums.TransformType;
+import com.nugumanov.wavelettransform.enums.WaveletType;
 import com.nugumanov.wavelettransform.transforms.Transform;
 
 import java.awt.*;

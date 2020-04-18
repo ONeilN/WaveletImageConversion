@@ -50,6 +50,11 @@ public class WaveletBufferedImage implements WaveletImage {
     }
 
     public BufferedImage getCroppedImage() {
-        return null;
+        // Calculating cropped image width and height
+        int croppedImageWidth = this.getTransformedImage().getWidth();
+        int croppedImageHeight = this.getTransformedImage().getHeight();
+        int divider = (int)Math.pow(2, this.getIterationCount());
+        return this.getTransformedImage().getSubimage(0, 0, croppedImageWidth / divider,
+                croppedImageHeight / divider);
     }
 }

@@ -35,5 +35,8 @@ public class Test {
 
         File reverseOutputFile = new File("src/main/resources/resultimages/haar.reverse.test3.png");
         imageInOut.outputImage(waveletReverseImage.getTransformedImage(), reverseOutputFile, "png");
+
+        File croppedOutputFile = new File("src/main/resources/resultimages/cropped.png");
+        imageInOut.outputImage(waveletForwardImage.getCroppedImage(), croppedOutputFile, "png");
     }
 }

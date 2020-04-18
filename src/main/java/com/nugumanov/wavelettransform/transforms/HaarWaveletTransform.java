@@ -1,5 +1,9 @@
 package com.nugumanov.wavelettransform.transforms;
 
+/**
+ * A class that implements the direct and inverse two-dimensional Haar transform
+ * @author Nugumanov Aizat
+ */
 public class HaarWaveletTransform implements WaveletTransform {
 
     private static double w0 = 0.5;
@@ -8,8 +12,8 @@ public class HaarWaveletTransform implements WaveletTransform {
     private static double s1 = 0.5;
 
     /**
-     * Прямое одномерное вейвлет-преобразование
-     * @param data - массив значений
+     * Direct one-dimensional wavelet transform
+     * @param data - array of values to transform
      */
     public void FWT(double[] data) {
 
@@ -30,11 +34,11 @@ public class HaarWaveletTransform implements WaveletTransform {
     } // FWT 1
 
     /**
-     * Прямое двумерное вейвлет-преобразование
-     * @param data - массив значений
-     * @param iterations - количество итераций
-     * @param width - ширина изображения
-     * @param height - высота изображения
+     * Direct two-dimensional wavelet transform
+     * @param data - array of values to transform
+     * @param iterations - count of iterations
+     * @param width - image width
+     * @param height - image height
      */
     public void FWT(double[][] data, int iterations, int width, int height) {
 
@@ -68,8 +72,8 @@ public class HaarWaveletTransform implements WaveletTransform {
     } // FWT 2
 
     /**
-     * Обратное одномерное вейвлет-преобразование
-     * @param data - массив значений
+     * Reverse one-dimensional wavelet transform
+     * @param data - array of values to transform
      */
     public void IWT(double[] data) {
         double[] temp = new double[data.length];
@@ -89,11 +93,11 @@ public class HaarWaveletTransform implements WaveletTransform {
     } // IWT 1
 
     /**
-     * Обратное двумерное вейвлет-преобразование
-     * @param data - массив значений
-     * @param iterations - количество итераций
-     * @param width - ширина изображения
-     * @param height - высота изображения
+     * Reverse two-dimensional wavelet transform
+     * @param data - array of values to transform
+     * @param iterations - count of iterations
+     * @param width - image width
+     * @param height - image height
      */
     public void IWT(double[][] data, int iterations, int width, int height) {
         int rows = width;

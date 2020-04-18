@@ -7,6 +7,10 @@ import com.nugumanov.wavelettransform.transforms.WaveletType;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+/**
+ * A class that implements forward and reverse wavelet image conversion
+ * @author Nugumanov Aizat
+ */
 public class Test {
     public static void main(String[] args) {
 

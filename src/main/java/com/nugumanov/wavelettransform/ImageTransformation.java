@@ -7,10 +7,22 @@ import com.nugumanov.wavelettransform.transforms.WaveletTransform;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+/**
+ * A class that implements forward and reverse wavelet image conversion
+ * @author Nugumanov Aizat
+ */
 public class ImageTransformation implements WaveletTransformation {
 
     private WaveletTransform waveletTransform = null;
 
+    /**
+     * A method that implements a wavelet transform depending on the type of transform and type of wavelet.
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param transformType Enumeration for type of transformation.
+     * @param waveletType Enumeration for wavelet types.
+     * @param iterations Iteration count in wavelet transform.
+     * @return An object of the @{@link BufferedImage} class that contains the converted image.
+     */
     public BufferedImage transform(BufferedImage bufferedImage, TransformType transformType, WaveletType waveletType, int iterations) {
         switch (transformType) {
             case FORWARD:
@@ -21,6 +33,13 @@ public class ImageTransformation implements WaveletTransformation {
         }
     }
 
+    /**
+     * A method that implements a forward wavelet transform depending on the type of wavelet.
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param type Enumeration for wavelet types.
+     * @param iterations Iteration count in wavelet transform.
+     * @return An object of the @{@link BufferedImage} class that contains the converted image.
+     */
     public BufferedImage forwardImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
@@ -60,6 +79,13 @@ public class ImageTransformation implements WaveletTransformation {
         return resultImage;
     }
 
+    /**
+     * A method that implements a forward wavelet transform depending on the type of wavelet.
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param type Enumeration for wavelet types.
+     * @param iterations Iteration count in wavelet transform.
+     * @return Two-dimensional array containing converted RGB values.
+     */
     public double[][] forwardArray(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
@@ -100,6 +126,13 @@ public class ImageTransformation implements WaveletTransformation {
         return transformedArray;
     }
 
+    /**
+     * A method that implements a reverse wavelet transform depending on the type of wavelet.
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param type Enumeration for wavelet types.
+     * @param iterations Iteration count in wavelet transform.
+     * @return An object of the @{@link BufferedImage} class that contains the converted image.
+     */
     public BufferedImage reverseImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
@@ -139,6 +172,13 @@ public class ImageTransformation implements WaveletTransformation {
         return resultImage;
     }
 
+    /**
+     * A method that implements a reverse wavelet transform depending on the type of wavelet.
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param type Enumeration for wavelet types.
+     * @param iterations Iteration count in wavelet transform.
+     * @return Two-dimensional array containing converted RGB values.
+     */
     public double[][] reverseArray(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
         waveletTransform = WaveletFactory.getTransform(type);
@@ -179,6 +219,15 @@ public class ImageTransformation implements WaveletTransformation {
         return transformedArray;
     }
 
+    /**
+     *
+     * @param fromMin
+     * @param fromMax
+     * @param toMin
+     * @param toMax
+     * @param x
+     * @return
+     */
     public double Scale(double fromMin, double fromMax, double toMin, double toMax, double x) {
 
         if (fromMax - fromMin == 0) return 0;

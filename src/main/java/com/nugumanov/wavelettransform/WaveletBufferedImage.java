@@ -5,6 +5,10 @@ import com.nugumanov.wavelettransform.transforms.WaveletType;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * A class that contains information about the transformed image.
+ * @author Nugumanov Aizat
+ */
 public class WaveletBufferedImage implements WaveletImage {
 
     private int iterationCount;
@@ -16,6 +20,12 @@ public class WaveletBufferedImage implements WaveletImage {
 
     private WaveletTransformation transformation = new ImageTransformation();
 
+    /**
+     * @param bufferedImage An object of the @{@link BufferedImage} class that contains the image to be converted.
+     * @param transformType Enumeration for type of transformation.
+     * @param waveletType Enumeration for wavelet types.
+     * @param iterationCount Iteration count in wavelet transform.
+     */
     public WaveletBufferedImage(BufferedImage bufferedImage, TransformType transformType, WaveletType waveletType, int iterationCount) {
 
         this.iterationCount = iterationCount;

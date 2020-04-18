@@ -1,4 +1,4 @@
-package com.nugumanov.wavelettransform.enums;
+package com.nugumanov.wavelettransform.transforms;
 
 public enum TransformType {
     FORWARD,

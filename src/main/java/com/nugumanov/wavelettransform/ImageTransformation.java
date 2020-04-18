@@ -1,15 +1,15 @@
 package com.nugumanov.wavelettransform;
 
-import com.nugumanov.wavelettransform.enums.TransformType;
-import com.nugumanov.wavelettransform.enums.WaveletType;
-import com.nugumanov.wavelettransform.transforms.Transform;
+import com.nugumanov.wavelettransform.transforms.TransformType;
+import com.nugumanov.wavelettransform.transforms.WaveletType;
+import com.nugumanov.wavelettransform.transforms.WaveletTransform;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class ImageTransformation implements WaveletTransformation {
 
-    private Transform waveletTransform = null;
+    private WaveletTransform waveletTransform = null;
 
     public BufferedImage transform(BufferedImage bufferedImage, TransformType transformType, WaveletType waveletType, int iterations) {
         switch (transformType) {

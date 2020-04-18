@@ -1,14 +1,14 @@
 package com.nugumanov.wavelettransform;
 
-import com.nugumanov.wavelettransform.enums.WaveletType;
-import com.nugumanov.wavelettransform.transforms.HaarTransform;
-import com.nugumanov.wavelettransform.transforms.Transform;
+import com.nugumanov.wavelettransform.transforms.WaveletType;
+import com.nugumanov.wavelettransform.transforms.HaarWaveletTransform;
+import com.nugumanov.wavelettransform.transforms.WaveletTransform;
 
 public class WaveletFactory {
 
-    public static Transform getTransform(WaveletType wavelet) {
+    public static WaveletTransform getTransform(WaveletType wavelet) {
         switch (wavelet) {
-            case HAAR : return new HaarTransform();
+            case HAAR : return new HaarWaveletTransform();
             default : return null;
         }
     }

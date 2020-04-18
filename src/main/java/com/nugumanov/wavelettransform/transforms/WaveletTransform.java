@@ -1,6 +1,6 @@
 package com.nugumanov.wavelettransform.transforms;
 
-public interface Transform {
+public interface WaveletTransform {
 
     void FWT(double[] data);
 

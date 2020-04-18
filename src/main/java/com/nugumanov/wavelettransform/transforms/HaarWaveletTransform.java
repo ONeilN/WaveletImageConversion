@@ -1,6 +1,6 @@
 package com.nugumanov.wavelettransform.transforms;
 
-public class HaarTransform implements Transform {
+public class HaarWaveletTransform implements WaveletTransform {
 
     private static double w0 = 0.5;
     private static double w1 = -0.5;

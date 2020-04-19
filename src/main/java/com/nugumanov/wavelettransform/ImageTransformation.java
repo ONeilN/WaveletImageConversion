@@ -1,5 +1,6 @@
 package com.nugumanov.wavelettransform;
 
+import com.nugumanov.wavelettransform.exeptions.WaveletTransformNotDefinedException;
 import com.nugumanov.wavelettransform.transforms.TransformType;
 import com.nugumanov.wavelettransform.transforms.WaveletType;
 import com.nugumanov.wavelettransform.transforms.WaveletTransform;
@@ -42,6 +43,13 @@ public class ImageTransformation implements WaveletTransformation {
      */
     public BufferedImage forwardImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
+        if (type == null) {
+            try {
+                throw new WaveletTransformNotDefinedException();
+            } catch (WaveletTransformNotDefinedException e) {
+                e.printStackTrace();
+            }
+        }
         waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
 
@@ -88,6 +96,13 @@ public class ImageTransformation implements WaveletTransformation {
      */
     public double[][] forwardArray(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
+        if (type == null) {
+            try {
+                throw new WaveletTransformNotDefinedException();
+            } catch (WaveletTransformNotDefinedException e) {
+                e.printStackTrace();
+            }
+        }
         waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
 
@@ -135,6 +150,13 @@ public class ImageTransformation implements WaveletTransformation {
      */
     public BufferedImage reverseImage(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
+        if (type == null) {
+            try {
+                throw new WaveletTransformNotDefinedException();
+            } catch (WaveletTransformNotDefinedException e) {
+                e.printStackTrace();
+            }
+        }
         waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
 
@@ -181,6 +203,13 @@ public class ImageTransformation implements WaveletTransformation {
      */
     public double[][] reverseArray(BufferedImage bufferedImage, WaveletType type, int iterations) {
 
+        if (type == null) {
+            try {
+                throw new WaveletTransformNotDefinedException();
+            } catch (WaveletTransformNotDefinedException e) {
+                e.printStackTrace();
+            }
+        }
         waveletTransform = WaveletFactory.getTransform(type);
         BufferedImage resultImage = bufferedImage;
 

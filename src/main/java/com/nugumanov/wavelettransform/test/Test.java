@@ -9,7 +9,7 @@ import java.io.File;
 
 /**
  * A class that implements forward and reverse wavelet image conversion
- * @author Nugumanov Aizat
+ * @author Nugumanov Aizat, Khialeev Azat
  */
 public class Test {
     public static void main(String[] args) {

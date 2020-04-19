@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 
 /**
  * A class that contains information about the transformed image.
- * @author Nugumanov Aizat
+ * @author Nugumanov Aizat, Khialeev Azat
  */
 public class WaveletBufferedImage implements WaveletImage {
 
@@ -59,6 +59,10 @@ public class WaveletBufferedImage implements WaveletImage {
         return transformedImage;
     }
 
+    /**
+     * Method that crop the transformed image.
+     * @return Cropped image.
+     */
     public BufferedImage getCroppedImage() {
         // Calculating cropped image width and height
         int croppedImageWidth = this.getTransformedImage().getWidth();

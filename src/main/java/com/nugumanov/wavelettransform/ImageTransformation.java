@@ -220,13 +220,13 @@ public class ImageTransformation implements WaveletTransformation {
     }
 
     /**
-     *
-     * @param fromMin
-     * @param fromMax
-     * @param toMin
-     * @param toMax
-     * @param x
-     * @return
+     * Method that normalizes the passed value.
+     * @param fromMin The lower limit of the value to be normalized.
+     * @param fromMax The upper limit of the value to be normalized.
+     * @param toMin The lower limit of the normalized value.
+     * @param toMax The upper limit of the normalized value.
+     * @param x The value to be normalized.
+     * @return Normalized value.
      */
     public double Scale(double fromMin, double fromMax, double toMin, double toMax, double x) {
 

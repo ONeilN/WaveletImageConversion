@@ -76,9 +76,9 @@ File croppedOutputFile = new File("src/main/resources/resultimages/cropped.png")
 imageInOut.outputImage(waveletForwardImage.getCroppedImage(), croppedOutputFile, "png");
 
 ```
-![Преобразованная картинка][cropped_image]
+![Обрезанная картинка][cropped_image]
 
-[back_transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Преобразованная картинка"
+[cropped_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Обрезанная картинка"
 # 4. Предстоит сделать.
 ## 4.1. Типы сигналов.
 На данный момент билиотека работает только с дискретными сигналами, то есть с изображениями представимыми в виде двумерных массивов.

@@ -66,14 +66,26 @@ File reverseOutputFile = new File("src/main/resources/resultimages/haar.reverse.
 
 imageInOut.outputImage(waveletReverseImage.getTransformedImage(), reverseOutputFile, "png");
 ```
+![Преобразованная картинка][back_transformed_image]
+
+[back_transformed_image]: https://github.com/FranzQuad/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.reverse.test.png "Преобразованная картинка"
+
 Для получения уменьшенной картинки без информации для её обратного восстаовления можно вызвать метод getCroppedImage который не принимает никаких аргументов.
 ```
 File croppedOutputFile = new File("src/main/resources/resultimages/cropped.png");
 
 imageInOut.outputImage(waveletForwardImage.getCroppedImage(), croppedOutputFile, "png");
-```
-# 4. Предстоит сделать.
 
+```
+![Преобразованная картинка][cropped_image]
+
+[back_transformed_image]: https://github.com/FranzQuad/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Преобразованная картинка"
+# 4. Предстоит сделать.
+## 4.1. Типы сигналов.
+На данный момент билиотека работает только с дискретными сигналами, то есть с изображениями представимыми в виде двумерных массивов.
+В будущем было бы интересно рассмотреть возможность работы с векторными изображениями.
+## 4.2 Типы изображений.
+Некоторые виды изображений уже сжаты, и хоть и представляют из себя дискретный сигнал, но записан не как обычный двумерный массив, где каждый элемент отвечает за свой пиксель. В будущем возможно изучить данные форматы, и производить преобразования и на них.
 # 5. Источники.
 
 [Wikipedia][https://ru.wikipedia.org/wiki/Вейвлет_Хаара]

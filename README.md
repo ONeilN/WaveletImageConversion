@@ -67,7 +67,7 @@ imageInOut.outputImage(waveletReverseImage.getTransformedImage(), reverseOutputF
 ```
 ![Преобразованная картинка][back_transformed_image]
 
-[back_transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.reverse.test3.png "Преобразованная картинка"
+[back_transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.reverse.test.png "Преобразованная картинка"
 
 Для получения уменьшенной картинки без информации для её обратного восстаовления можно вызвать метод getCroppedImage который не принимает никаких аргументов.
 ```

@@ -8,9 +8,9 @@
 ![\large x_{i}](https://render.githubusercontent.com/render/math?math=%5Clarge%20x_%7Bi%7D) и 
 ![\large x_{i + 1}](https://render.githubusercontent.com/render/math?math=%5Clarge%20x_%7Bi%20%2B%201%7D)
 ставятся в соответствие два числа 
-![\large \frac{x_{2i} + x_{2i + 1}}{2}](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cfrac%7Bx_%7B2i%7D%20%2B%20x_%7B2i%20%2B%201%7D%7D%7B2%7D)
+![\large a_{i} = \large \frac{x_{2i} + x_{2i + 1}}{2}](https://render.githubusercontent.com/render/math?math=%5Clarge%20a_%7Bi%7D%20%3D%20%5Clarge%20%5Cfrac%7Bx_%7B2i%7D%20%2B%20x_%7B2i%20%2B%201%7D%7D%7B2%7D)
 и 
-![\large \frac{x_{2i} - x_{2i + 1}}{2}](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cfrac%7Bx_%7B2i%7D%20-%20x_%7B2i%20%2B%201%7D%7D%7B2%7D).
+![\large b_{i} = \large \frac{x_{2i} - x_{2i + 1}}{2}](https://render.githubusercontent.com/render/math?math=%5Clarge%20b_%7Bi%7D%20%3D%20%5Clarge%20%5Cfrac%7Bx_%7B2i%7D%20-%20x_%7B2i%20%2B%201%7D%7D%7B2%7D).
 Пройдясь по циклу по всем элементам массива получаются два новых массива (сигнала). Массив 
 ![\large A = \{a_i\}](https://render.githubusercontent.com/render/math?math=%5Clarge%20A%20%3D%20%5C%7Ba_i%5C%7D)
 представляющий собой на практике уменьшенную версию исходного изображения, и второй массив
@@ -81,10 +81,10 @@ imageInOut.outputImage(waveletForwardImage.getCroppedImage(), croppedOutputFile,
 [cropped_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Обрезанная картинка"
 # 4. Предстоит сделать.
 ## 4.1. Типы сигналов.
-На данный момент билиотека работает только с дискретными сигналами, то есть с изображениями представимыми в виде двумерных массивов.
+На данный момент билиотека работает только с дискретными сигналами, то есть с изображениями представимыми в виде двумерных массивов пикселей.
 В будущем было бы интересно рассмотреть возможность работы с векторными изображениями.
 ## 4.2 Типы изображений.
-Некоторые виды изображений уже сжаты, и хоть и представляют из себя дискретный сигнал, но записан не как обычный двумерный массив, где каждый элемент отвечает за свой пиксель. В будущем возможно изучить данные форматы, и производить преобразования и на них.
+Некоторые виды изображений уже сжаты, и хоть они и представляют из себя дискретный сигнал, но записаны не как обычный двумерный массив, где каждый элемент отвечает за свой пиксель. В будущем возможно изучить данные форматы, и добавить возможность работы с ними
 # 5. Источники.
 
 [Wikipedia][https://ru.wikipedia.org/wiki/Вейвлет_Хаара]

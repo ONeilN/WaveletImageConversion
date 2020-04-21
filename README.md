@@ -26,7 +26,6 @@
 Пусть дан одномерный массив
 ![\large X= \{100, 150, 200, 250, 125, 50\}](https://render.githubusercontent.com/render/math?math=%5Clarge%20X%3D%20%5C%7B100%2C%20150%2C%20200%2C%20250%2C%20125%2C%2050%5C%7D)
 Тогда после преобразования он будет выглядеть как ![\large X= \{125,  225, 125\}](https://render.githubusercontent.com/render/math?math=%5Clarge%20X%3D%20%5C%7B125%2C%20%20225%2C%20125%5C%7D).
-### 2.2 Двумерный случай
 
 ## 3. Использование класса.
 Пусть дана следующая картинка. 
@@ -52,7 +51,7 @@ imageInOut.outputImage(waveletForwardImage.getTransformedImage(), forwardOutputF
 
 ![Преобразованная картинка][transformed_image]
 
-[transformed_image]: https://github.com/FranzQuad/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.test.png "Преобразованная картинка"
+[transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.test.png "Преобразованная картинка"
 
 Обратное преобразование
 ```
@@ -68,7 +67,7 @@ imageInOut.outputImage(waveletReverseImage.getTransformedImage(), reverseOutputF
 ```
 ![Преобразованная картинка][back_transformed_image]
 
-[back_transformed_image]: https://github.com/FranzQuad/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.reverse.test.png "Преобразованная картинка"
+[back_transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/haar.reverse.test.png "Преобразованная картинка"
 
 Для получения уменьшенной картинки без информации для её обратного восстаовления можно вызвать метод getCroppedImage который не принимает никаких аргументов.
 ```
@@ -79,7 +78,7 @@ imageInOut.outputImage(waveletForwardImage.getCroppedImage(), croppedOutputFile,
 ```
 ![Преобразованная картинка][cropped_image]
 
-[back_transformed_image]: https://github.com/FranzQuad/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Преобразованная картинка"
+[back_transformed_image]: https://github.com/ONeilN/WaveletImageConversion/blob/master/src/main/resources/testimages/cropped.png "Преобразованная картинка"
 # 4. Предстоит сделать.
 ## 4.1. Типы сигналов.
 На данный момент билиотека работает только с дискретными сигналами, то есть с изображениями представимыми в виде двумерных массивов.

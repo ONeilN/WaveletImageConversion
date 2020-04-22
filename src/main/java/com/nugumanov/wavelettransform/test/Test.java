@@ -19,25 +19,25 @@ public class Test {
         /**
          *  Forward Test
          */
-        File forwardInputFile = new File("src/main/resources/testimages/test3.png");
+        File forwardInputFile = new File("src/main/resources/testimages/test.png");
 
         BufferedImage forwardImage = imageInOut.inputImage(forwardInputFile);
 
         WaveletImage waveletForwardImage = new WaveletBufferedImage(forwardImage, TransformType.FORWARD, WaveletType.HAAR, 2);
 
-        File forwardOutputFile = new File("src/main/resources/resultimages/haar.forward.test3.png");
+        File forwardOutputFile = new File("src/main/resources/resultimages/haar.forward.test.png");
         imageInOut.outputImage(waveletForwardImage.getTransformedImage(), forwardOutputFile, "png");
 
         /**
          * Reverse Test
          */
-        File reverseInputFile = new File("src/main/resources/testimages/haar.forward.test3.png");
+        File reverseInputFile = new File("src/main/resources/testimages/haar.forward.test.png");
 
         BufferedImage reverseImage = imageInOut.inputImage(reverseInputFile);
 
         WaveletImage waveletReverseImage = new WaveletBufferedImage(reverseImage, TransformType.REVERSE, WaveletType.HAAR, 2);
 
-        File reverseOutputFile = new File("src/main/resources/resultimages/haar.reverse.test3.png");
+        File reverseOutputFile = new File("src/main/resources/resultimages/haar.reverse.test.png");
         imageInOut.outputImage(waveletReverseImage.getTransformedImage(), reverseOutputFile, "png");
 
         File croppedOutputFile = new File("src/main/resources/resultimages/cropped.png");
